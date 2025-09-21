@@ -1,5 +1,22 @@
 "use client";
-
+// app/page.js
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 className="text-3xl font-bold text-center text-gray-800 mb-2">
+          Welcome to My Portfolio
+        </h1>
+        <p className="text-gray-600 text-center mb-6">
+          This site is built with Next.js and deployed on Vercel!
+        </p>
+        <div className="bg-blue-500 text-white px-4 py-2 rounded text-center">
+          Deployment Status: Ready for Vercel
+        </div>
+      </div>
+    </div>
+  );
+}
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 export default function Home() {
@@ -39,7 +56,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex justify-between items-center p-5">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <Img
+              <Image
                 src="/images/chaithanya.jpg"
                 alt="Chaithanya"
                 className="w-12 h-12 rounded-full ring-2 ring-blue-400 object-cover shadow-lg transform transition-transform duration-700 hover:scale-110 animate-float"
@@ -112,7 +129,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-800 px-4">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-            <Img
+            <Image
               src="/images/chaithanya-large.jpg"
               alt="Chaithanya portrait"
               className="w-44 h-44 rounded-full object-cover ring-4 ring-blue-400 shadow-2xl animate-float"
@@ -173,7 +190,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-8">
               {/* Project Card 1 */}
               <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-[1.02]">
-                <img src="/projects/recipe-app.png" alt="" className="w-full h-56 object-cover" />
+                <Image src="/projects/recipe-app.png" alt="" className="w-full h-56 object-cover" />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">Portfolio Website</h3>
                   <p className="text-gray-300 mb-4">A responsive portfolio built with React and Tailwind CSS.</p>
@@ -183,7 +200,7 @@ export default function Home() {
 
               {/* Project Card 2 */}
               <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-[1.02]">
-                <Img src="/projects/shopping-list.png" alt="QuizMaster" className="w-full h-56 object-cover" />
+                <Image src="/projects/shopping-list.png" alt="QuizMaster" className="w-full h-56 object-cover" />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2"> Mini Project</h3>
                   <p className="text-gray-300 mb-4">An educational mini-project developed in Java to manage quizzes and evaluate user performance.</p>
@@ -237,7 +254,7 @@ export default function Home() {
             </button>
 
             <div className="bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
-              <Img src={gallery[activeIndex].src} alt={gallery[activeIndex].title} className="w-full h-[420px] object-contain bg-black" />
+              <Image src={gallery[activeIndex].src} alt={gallery[activeIndex].title} className="w-full h-[420px] object-contain bg-black" />
 
               <div className="p-4 flex items-center justify-between">
                 <div>
