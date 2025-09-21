@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-
+import Image from "next/image";
 export default function Home() {
   const [showGallery, setShowGallery] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
@@ -39,12 +39,12 @@ export default function Home() {
         <div className="max-w-6xl mx-auto flex justify-between items-center p-5">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <img
+              <Img
                 src="/images/chaithanya.jpg"
                 alt="Chaithanya"
                 className="w-12 h-12 rounded-full ring-2 ring-blue-400 object-cover shadow-lg transform transition-transform duration-700 hover:scale-110 animate-float"
               />
-              <span className="absolute -right-2 -top-2 bg-blue-500 px-2 py-1 rounded-full text-xs font-medium animate-ping-slow">🎓</span>
+              <span className="absolute -right-2 -top-2 bg-blue-500 px-2 py-1 rounded-full text-xs font-medium animate-ping-slow"></span>
             </div>
 
             <div className="text-lg font-semibold text-blue-300">Hey there 👋</div>
@@ -112,7 +112,7 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="py-20 bg-gray-800 px-4">
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
-            <img
+            <Img
               src="/images/chaithanya-large.jpg"
               alt="Chaithanya portrait"
               className="w-44 h-44 rounded-full object-cover ring-4 ring-blue-400 shadow-2xl animate-float"
@@ -183,7 +183,7 @@ export default function Home() {
 
               {/* Project Card 2 */}
               <div className="bg-gray-700 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:scale-[1.02]">
-                <img src="/projects/shopping-list.png" alt="QuizMaster" className="w-full h-56 object-cover" />
+                <Img src="/projects/shopping-list.png" alt="QuizMaster" className="w-full h-56 object-cover" />
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2"> Mini Project</h3>
                   <p className="text-gray-300 mb-4">An educational mini-project developed in Java to manage quizzes and evaluate user performance.</p>
@@ -237,7 +237,7 @@ export default function Home() {
             </button>
 
             <div className="bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
-              <img src={gallery[activeIndex].src} alt={gallery[activeIndex].title} className="w-full h-[420px] object-contain bg-black" />
+              <Img src={gallery[activeIndex].src} alt={gallery[activeIndex].title} className="w-full h-[420px] object-contain bg-black" />
 
               <div className="p-4 flex items-center justify-between">
                 <div>
