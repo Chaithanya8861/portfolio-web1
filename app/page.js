@@ -44,7 +44,7 @@ export default function Home() {
                 alt="Chaithanya"
                 className="w-12 h-12 rounded-full ring-2 ring-blue-400 object-cover shadow-lg transform transition-transform duration-700 hover:scale-110 animate-float"
               />
-              <span className="absolute -right-2 -top-2 bg-blue-500 px-2 py-1 rounded-full text-xs font-medium animate-ping-slow"><br>🎓</br>🎓</span>
+              <span className="absolute -right-2 -top-2 bg-blue-500 px-2 py-1 rounded-full text-xs font-medium animate-ping-slow">🎓</span>
             </div>
 
             <div className="text-lg font-semibold text-blue-300">Hey there 👋</div>
